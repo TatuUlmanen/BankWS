@@ -18,6 +18,7 @@ class ApplicationRequest {
 	protected $keychain;
 	
 	public function __construct($config = array(), $keychain) {
+		require_once(__DIR__.'/../lib/xmlseclibs.php');
 		$this->keychain = $keychain;
 		$this->namespace_uri    = isset($config['namespace']) ? $config['namespace'] : 'http://bxd.fi/xmldata/';
 		$this->namespace_prefix = isset($config['namespace_prefix']) ? $config['namespace_prefix'] : null;

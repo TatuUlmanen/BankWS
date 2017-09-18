@@ -9,6 +9,7 @@ class SoapMessage
 	private $body     = null;
 	
 	public function __construct($contents = null) {
+		require_once(__DIR__.'/../lib/xmlseclibs.php');
 		$this->dom = new \DOMDocument();
 		
 		# Build soapenv:Envelope

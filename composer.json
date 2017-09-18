@@ -10,7 +10,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.0",
-        "xmlseclibs/xmlseclibs": "dev-master"
+        "robrichards/xmlseclibs": "dev-master"
     },
     "autoload": {
         "psr-4": {

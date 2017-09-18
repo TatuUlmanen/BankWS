@@ -40,7 +40,7 @@ class Keychain {
 	public function getKeyPath($name, $only_if_exists = true) {
 		$name = pathinfo($name, PATHINFO_FILENAME);
 		if($name == 'SSLCertificate') {
-			$path = BWS_ROOT_PATH.'keys/'.$this->bankHandler.'-SSLCertificate.cer';
+			$path = $this->keychainFolder.$this->bankHandler.'-SSLCertificate.cer';
 		} else {
 			$path = $this->keychainFolder.$this->bankHandler.'-'.$name.'.cer';
 		}

@@ -181,7 +181,7 @@ class SampoBankHandler extends BankHandler {
 		
 		$soapResponse = $this->request($applicationRequestValues, array(
 			'command'                => 'CreateCertificateIn',
-			'bodyTemplate'           => BWS_ROOT_PATH.'templates/SampoCreateCertificateRequest.xml',
+			'bodyTemplate'           => __DIR__.'/../templates/SampoCreateCertificateRequest.xml',
 			'to'                     => self::CERT_SERVICE_ADDRESS,
 			'applicationRequestType' => 'CreateCertificateRequest',
 			'applicationRequestNamespace' => 'http://danskebank.dk/PKI/PKIFactoryService/elements',
@@ -217,8 +217,8 @@ class SampoBankHandler extends BankHandler {
 			
 			$rootpath = $this->keychain->getKeyPath('RootCertificate', false);
 			
-			if(file_exists(BWS_ROOT_PATH.'keys/Sampo-RootCertificate.cer')) {
-				copy(BWS_ROOT_PATH.'keys/Sampo-RootCertificate.cer', $rootpath);
+			if(file_exists(__DIR__.'/../keys/Sampo-RootCertificate.cer')) {
+				copy(__DIR__.'/../keys/Sampo-RootCertificate.cer', $rootpath);
 			}
 			
 			if(!$this->keychain->getKeyPath('RootCertificate')) {
@@ -233,7 +233,7 @@ class SampoBankHandler extends BankHandler {
 		
 		$soapResponse = $this->request($applicationRequestValues, array(
 			'command'                => 'GetBankCertificateIn',
-			'bodyTemplate'           => BWS_ROOT_PATH.'templates/SampoGetBankCertificateRequest.xml',
+			'bodyTemplate'           => __DIR__.'/../templates/SampoGetBankCertificateRequest.xml',
 			'to'                     => self::CERT_SERVICE_ADDRESS,
 			'applicationRequestType' => 'GetBankCertificateRequest',
 			'applicationRequestNamespace' => 'http://danskebank.dk/PKI/PKIFactoryService/elements',

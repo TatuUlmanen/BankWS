@@ -69,14 +69,12 @@ class SamlinkBankHandler extends BankHandler {
 	public function getCertificate($config = null) {
 	
 		$options = array(
-			'writepath' => BWS_ROOT_PATH,
 			'initCode' => false
 		);
 		
 		$options = $this->updateConfig($options, $config);
 		
 		$csr = BankWS::createCSR(array(
-			'writepath' => $options['writepath'],
 			'password'  => $options['initCode'],
 			'outform'   => 'PEM',
 			'SN'        => $this->config->customerId
@@ -88,7 +86,7 @@ class SamlinkBankHandler extends BankHandler {
 		);
 		
 		$soapResponse = $this->request($applicationRequestValues, array(
-			'bodyTemplate'           => BWS_ROOT_PATH.'templates/OpCertApplicationRequest.xml',
+			'bodyTemplate'           => __DIR__.'/../templates/OpCertApplicationRequest.xml',
 			'to'                     => self::CERT_SERVICE_ADDRESS,
 			'applicationRequestType' => 'CertApplicationRequest',
 			'applicationRequestNamespace' => 'http://op.fi/mlp/xmldata/',
@@ -114,14 +112,11 @@ class SamlinkBankHandler extends BankHandler {
 	
 	public function renewCertificate($config = null) {
 		
-		$options = array(
-			'writepath' => BWS_ROOT_PATH
-		);
+		$options = array();
 		
 		$options = $this->updateConfig($options, $config);
 		
 		$csr = BankWS::createCSR(array(
-			'writepath' => $options['writepath'],
 			'password'  => $this->config->customerId,
 			'outform'   => 'PEM',
 			'SN'        => $this->config->customerId
@@ -134,7 +129,7 @@ class SamlinkBankHandler extends BankHandler {
 		);
 		
 		$soapResponse = $this->request($applicationRequestValues, array(
-			'bodyTemplate'           => BWS_ROOT_PATH.'templates/OpCertApplicationRequest.xml',
+			'bodyTemplate'           => __DIR__.'/../templates/OpCertApplicationRequest.xml',
 			'to'                     => self::CERT_SERVICE_ADDRESS,
 			'applicationRequestType' => 'CertApplicationRequest',
 			'applicationRequestNamespace' => 'http://op.fi/mlp/xmldata/',

@@ -105,7 +105,7 @@ class NordeaBankHandler extends BankHandler {
 		);
 		
 		$soapResponse = $this->request($applicationRequestValues, array(
-			'bodyTemplate'                => BWS_ROOT_PATH.'templates/NordeaCertApplicationRequest.xml',
+			'bodyTemplate'                => __DIR__.'/../templates/NordeaCertApplicationRequest.xml',
 			'to'                          => self::CERT_SERVICE_ADDRESS,
 			'applicationRequestType'      => 'CertApplicationRequest',
 			'applicationRequestNamespace' => 'http://filetransfer.nordea.com/xmldata/',

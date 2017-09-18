@@ -1,34 +1,6 @@
 <?php
 namespace BankWS;
 
-# Root path, don't change
-define('BWS_ROOT_PATH', rtrim(__DIR__, '/').'/');
-
-# XMLSecLibs is used to sign application requests
-require_once('lib/xmlseclibs/xmlseclibs.php');
-
-# Class autoloader
-spl_autoload_register(function($class) {
-	
-	# Get class name, discarding namespace definitions
-	$parts = explode('\\', $class);
-	$class = array_pop($parts);
-	$include_dirs = array(
-		'classes/',
-		'classes/BankHandlers/',
-		'classes/Exceptions/'
-	);
-	
-	foreach($include_dirs as $dir) {
-		# Normalized path
-		$path = __DIR__.'/'.$dir.trim($class, '.').'.php';
-		if(file_exists($path)) {
-			require($path);
-			break;
-		}
-	}
-});
-
 /**
  * BankWS
  *

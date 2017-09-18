@@ -192,7 +192,7 @@ abstract class BankHandler {
 		$applicationRequest->setValues($applicationRequestValues);
 		
 		$templateBase = in_array($this->bankHandlerName, array('Aktia', 'Handelsbanken', 'SP', 'POP')) ? 'Samlink' : $this->bankHandlerName;
-		$config['bodyTemplate'] = isset($config['bodyTemplate']) ? $config['bodyTemplate'] : BWS_ROOT_PATH.'templates/'.$templateBase.$config['applicationRequestType'].'.xml';
+		$config['bodyTemplate'] = isset($config['bodyTemplate']) ? $config['bodyTemplate'] : __DIR__.'/../templates/'.$templateBase.$config['applicationRequestType'].'.xml';
 		
 		# Sign ApplicationRequest if needed
 		if($config['signContent']) {

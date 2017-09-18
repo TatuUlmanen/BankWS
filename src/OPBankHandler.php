@@ -93,14 +93,12 @@ class OpBankHandler extends BankHandler {
 	public function getCertificate($config = null) {
 		
 		$options = array(
-			'writepath' => BWS_ROOT_PATH,
 			'initCode' => false
 		);
 		
 		$options = $this->updateConfig($options, $config);
 		
 		$csr = BankWS::createCSR(array(
-			'writepath' => $options['writepath'],
 			'password'  => $options['initCode'],
 			'CN'        => $this->config->customerId
 		));
@@ -111,7 +109,7 @@ class OpBankHandler extends BankHandler {
 		);
 		
 		$soapResponse = $this->request($applicationRequestValues, array(
-			'bodyTemplate'           => BWS_ROOT_PATH.'templates/OpCertApplicationRequest.xml',
+			'bodyTemplate'           => __DIR__.'/../templates/OpCertApplicationRequest.xml',
 			'to'                     => $this->config->testmode ? self::CERT_SERVICE_TEST_ADDRESS : self::CERT_SERVICE_ADDRESS,
 			'applicationRequestType' => 'CertApplicationRequest',
 			'applicationRequestNamespace' => 'http://op.fi/mlp/xmldata/',

@@ -1,10 +1,6 @@
 <?php
 namespace BankWS;
 
-if(!defined('BWS_ROOT_PATH')) {
-	die('No direct access allowed.');
-}
-
 class NordeaBankHandler extends BankHandler {
 	
 	const WEB_SERVICE_ADDRESS  = 'https://filetransfer.nordea.com/services/CorporateFileService';

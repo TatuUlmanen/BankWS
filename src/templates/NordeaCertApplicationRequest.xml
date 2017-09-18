@@ -1,0 +1,8 @@
+<cer:{Command} xmlns:cer="http://bxd.fi/CertificateService">
+	<cer:RequestHeader>
+		<cer:SenderId>{SenderId}</cer:SenderId>
+		<cer:RequestId>{RequestId}</cer:RequestId>
+		<cer:Timestamp>{Timestamp}</cer:Timestamp>
+	</cer:RequestHeader>
+	<cer:ApplicationRequest>{ApplicationRequest}</cer:ApplicationRequest>
+</cer:{Command}>

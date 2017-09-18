@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:pkif="http://danskebank.dk/PKI/PKIFactoryService" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><pkif:PKIFactoryServiceFault><pkif:CustomerId>123456</pkif:CustomerId><pkif:SenderId>123456</pkif:SenderId><pkif:RequestId>27950345</pkif:RequestId><pkif:Timestamp>2011-09-02T09:43:08Z</pkif:Timestamp><pkif:InterfaceVersion>1</pkif:InterfaceVersion><pkif:ReturnCode>20</pkif:ReturnCode><pkif:ReturnText>Problem with UserId or PIN.</pkif:ReturnText></pkif:PKIFactoryServiceFault></env:Body></env:Envelope>

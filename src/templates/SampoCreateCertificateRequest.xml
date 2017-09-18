@@ -1,0 +1,11 @@
+<pkif:{Command} xmlns:pkif="http://danskebank.dk/PKI/PKIFactoryService">
+	<pkif:RequestHeader>
+		<pkif:SenderId>{SenderId}</pkif:SenderId>
+		<pkif:CustomerId>{CustomerId}</pkif:CustomerId>
+		<pkif:RequestId>{RequestId}</pkif:RequestId>
+		<pkif:Timestamp>{Timestamp}</pkif:Timestamp>
+		<pkif:InterfaceVersion>1</pkif:InterfaceVersion>
+		<pkif:Environment>{Environment}</pkif:Environment>
+	</pkif:RequestHeader>
+	{ApplicationRequest}
+</pkif:{Command}>

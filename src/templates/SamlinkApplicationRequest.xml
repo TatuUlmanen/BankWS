@@ -1,0 +1,11 @@
+<cor:{Command} xmlns:cor="http://bxd.fi/CorporateFileService" xmlns:mod="http://model.bxd.fi" >
+	<mod:RequestHeader>
+		<mod:SenderId>{SenderId}</mod:SenderId>
+		<mod:RequestId>{RequestId}</mod:RequestId>
+		<mod:Timestamp>{Timestamp}</mod:Timestamp>
+		<mod:Language>FI</mod:Language>
+		<mod:UserAgent>{SoftwareId}</mod:UserAgent>
+		<mod:ReceiverId>SAMLINK</mod:ReceiverId>
+	</mod:RequestHeader>
+	<mod:ApplicationRequest>{ApplicationRequest}</mod:ApplicationRequest>
+</cor:{Command}>

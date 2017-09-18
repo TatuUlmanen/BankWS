@@ -1,0 +1,149 @@
+html {
+	background: #ccc;
+}
+
+body {
+	font: 14px Segoe UI;
+	line-height: 150%;
+	width: 960px;
+	margin: 0 auto;
+	background: #fff;
+	box-shadow: 2px 0 2px rgba(0, 0, 0, 0.3);
+}
+
+a {
+	color: #025;
+}
+
+a:hover {
+	color: #469;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 150%;
+	padding: 0 10px;
+	background: #ccc;
+	font-weight: 600;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+	text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
+	margin-left: -10px;
+	border-radius: 2px;
+}
+
+h1 { font-size: 24px; background: rgba(0, 20, 50, 0.30); border: 1px solid rgba(0, 20, 50, 0.35); }
+h2 { font-size: 22px; background: rgba(0, 20, 50, 0.26); border: 1px solid rgba(0, 20, 50, 0.31); margin-top: 50px; }
+h3 { font-size: 20px; background: rgba(0, 20, 50, 0.22); border: 1px solid rgba(0, 20, 50, 0.27); margin-top: 50px; }
+h4 { font-size: 18px; background: rgba(0, 20, 50, 0.18); border: 1px solid rgba(0, 20, 50, 0.23); margin-top: 40px; font-weight: 100; }
+h5 { font-size: 14px; background: rgba(0, 20, 50, 0.14); border: 1px solid rgba(0, 20, 50, 0.19); margin-top: 40px; font-weight: 100; font-family: Consolas, monospace; }
+h6 { font-size: 14px; background: rgba(0, 20, 50, 0.10); border: 1px solid rgba(0, 20, 50, 0.15); }
+
+code {
+	font-family: Consolas, monospace;
+	background: rgba(0, 20, 50, 0.14);
+}
+
+pre {
+	background: rgba(0, 20, 50, 0.14);
+	border-radius: 3px;
+	box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+	padding: 5px 8px;
+}
+
+pre code {
+	background: transparent;
+}
+
+#sidebar {
+	float: left;
+	width: 260px;
+	height: 1px;
+}
+
+#toc {
+	font-size: 12px;
+	line-height: 125%;
+	padding: 20px 20px 20px 40px;
+	position: fixed;
+	top: 0;
+}
+
+#toc ul {
+	padding: 0 0 0 20px;
+}
+
+#toc .active {
+	color: #f00;
+}
+
+#documentation {
+	float: left;
+	width: 680px;
+	padding: 20px 20px 20px 0;
+}
+
+.flowchart {
+	position: relative;
+	width: 680px;
+	margin-bottom: 40px;
+}
+
+.flowchart .method,
+.flowchart .class,
+.flowchart .exception,
+.flowchart .group {
+	z-index: 1;
+	text-align: center;
+	margin: 10px 5px;
+	padding: 5px 8px;
+	border: 1px solid #777;
+	box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+	font-weight: normal;
+}
+
+.flowchart > .method,
+.flowchart > .class,
+.flowchart > .exception,
+.flowchart > .group {
+	margin-right: 30px;
+}
+
+.flowchart .class {
+	background: rgba(0, 30, 100, 0.10);
+}
+
+.flowchart .method {
+	background: rgba(30, 150, 0, 0.15);
+	border-radius: 100px;
+}
+
+.flowchart .exception {
+	background: rgba(250, 0, 0, 0.15);
+	border: 4px outset rgba(250, 0, 0, 0.55);
+	padding: 3px 5px;
+}
+
+.flowchart .group {
+	background: transparent;
+	border: 1px dashed #aaa;
+	box-shadow: none;
+}
+
+.flowchart .w-150 { width: 150px; }
+.flowchart .w-200 { width: 200px; }
+.flowchart .w-250 { width: 250px; }
+.flowchart .w-300 { width: 300px; }
+.flowchart .w-350 { width: 350px; }
+.flowchart .w-400 { width: 400px; }
+.flowchart .w-450 { width: 450px; }
+.flowchart .w-500 { width: 500px; }
+
+.flowchart .left { float: left; }
+.flowchart .right { float: right; }
+.flowchart .clear { clear: both; }
+
+.flowchart .optional {
+	border-style: dashed;
+	opacity: 0.7;
+}

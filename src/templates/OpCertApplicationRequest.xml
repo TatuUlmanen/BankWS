@@ -1,0 +1,8 @@
+<opc:{Command} xmlns:opc="http://mlp.op.fi/OPCertificateService">
+	<opc:RequestHeader>
+		<opc:SenderId>{SenderId}</opc:SenderId>
+		<opc:RequestId>{RequestId}</opc:RequestId>
+		<opc:Timestamp>{Timestamp}</opc:Timestamp>
+	</opc:RequestHeader>
+	<opc:ApplicationRequest>{ApplicationRequest}</opc:ApplicationRequest>
+</opc:{Command}>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BankWS</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="jquery.jsPlumb.min.js"></script>
+	<script type="text/javascript" src="common.js"></script>
+	<link rel="stylesheet" type="text/css" href="screen.css" />
+</head>
+<body>
+
+	<div class="flowchart">
+		<div class="group clear left">
+			User instantiable
+			<div>
+				<div class="class w-200 clear left">BankWS</div>
+				<div class="class w-200 left">BankHandlerConfig</div>
+			</div>
+			<p style="clear: both;"></p>
+		</div>
+		
+		<div class="method w-150 clear left">BankWS::getBankHandler</div>
+		<div class="class w-150 left">Keychain</div>
+		<div class="exception w-150 left">KeychainException</div>
+		
+		<div class="class w-250 clear left" id="BankHandler">
+			BankHandler
+			<div class="class">NordeaBankHandler</div>
+			<div class="class">SampoBankHandler</div>
+			<div class="class">OPBankHandler</div>
+			<div class="class">
+				SamlinkBankHandler
+				<div class="class">AktiaBankHandler</div>
+				<div class="class">HandelsbankenBankHandler</div>
+				<div class="class">SPBankHandler</div>
+				<div class="class">POPBankHandler</div>
+			</div>
+		</div>
+		
+		<div class="left w-300">		
+			<div class="group">
+				Public methods
+				<div class="method">BankHandler::getUserInfo</div>
+				<div class="method">BankHandler::getCertificate</div>
+				<div class="method">BankHandler::downloadFileList</div>
+				<div class="method">BankHandler::downloadFile</div>
+				<div class="method">BankHandler::uploadFile</div>
+				<div class="method optional">BankHandler::renewCertificate</div>
+			</div>
+			<div class="group">
+				SampoBankHandler
+				<div class="method" id="BankHandler_getBankCertificate">BankHandler::getBankCertificate</div>
+			</div>
+		</div>
+		
+		<div class="clear" style="padding-top: 20px;">
+			<div class="method clear left w-200" id="BankHandler_request">BankHandler::request</div>
+			<div class="exception left w-200" style="margin-left: 80px;">Exception</div>
+		</div>
+		
+		<div class="clear" style="padding-top: 10px; margin-left: 40px;">
+			<div class="method clear left w-200">BankHandler::validateSchema</div>
+			<div class="exception left w-200" style="margin-left: 40px;">SchemaValidationException</div>
+		</div>
+		
+		<div style="margin-left: 40px;">
+			<div class="clear" style="padding-top: 10px;">
+				<div class="class clear left w-250">
+					ApplicationRequest
+					<div class="class">CertApplicationRequest</div>
+					<div class="class">CreateCertificateRequest</div>
+					<div class="class">GetBankCertificateRequest</div>
+				</div>
+			</div>
+			
+			<div class="left">
+				<div class="method w-200" style="margin-left: 30px;">ApplicationRequest::encrypt</div>
+				<div class="method w-200" style="margin-left: 30px;">ApplicationRequest::sign</div>
+			</div>
+		</div>
+		
+		<div class="clear" style="padding-top: 20px">
+			<div class="class clear left w-200">SoapRequest</div>
+			<div class="class left w-200" style="margin-left: 30px;">SoapMessage</div>
+		</div>
+		
+		<div class="method clear w-200" style="margin-left: 256px;">SoapRequest::sign</div>
+		<div class="method clear left w-200">SoapRequest::request</div>
+		<div class="exception left w-200">Exception</div>
+		
+		<div class="class clear left w-200">SoapResponse</div>
+		<div class="class left w-200">SoapResponseHeader</div>
+		
+		<div class="class clear left w-250">
+			ApplicationResponse
+			<div class="class">CertApplicationResponse</div>
+			<div class="class">CreateCertificateResponse</div>
+			<div class="class">GetBankCertificateResponse</div>
+		</div>
+		
+		<p style="clear: both;"></p>
+	</div>
+</body>
+</html>
